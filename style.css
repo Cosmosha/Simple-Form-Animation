@@ -9,8 +9,9 @@ body{
     display: flex;
     background-color: rgb(87,189,140);
     transition: background 0.5s ease;
-    position: relative;
+    /* position: relative; */
 }
+
 
 .field-name, .field-email, .field-password, .field-finish{
     position: absolute;
@@ -40,7 +41,7 @@ body{
     outline: none;
 }
 
-div.innactive{
+div.inactive{
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, 50%);
@@ -50,4 +51,16 @@ div.active{
     opacity: 1;
     pointer-events: all;
     transform: translate(-50%, -50%);
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
 }
